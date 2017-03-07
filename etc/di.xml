@@ -110,8 +110,8 @@
     </type>
 
     <!-- ShipperHQ extension -->
-    <type name="ShipperHQ\Shipper\Model\Carrier\ProcessorShipperMapper">
-        <plugin name="subscribepro_shipperhq" type="Swarming\SubscribePro\Plugin\ShippingHQ\ShipperMapper" />
+    <type name="ShipperHQ\Shipper\Model\Carrier\Processor\ShipperMapper">
+        <plugin name="subscribepro_shipperhq" type="Swarming\SubscribePro\Plugin\ShippingHQ\ShipperMapperPlugin" />
     </type>
 
     <!-- SubscribeProAdapter -->
