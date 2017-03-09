@@ -1,6 +1,6 @@
 <?php
 
-namespace Swarming\SubscribePro\Plugin\ShippingHQ;
+namespace Swarming\SubscribePro\Plugin\ShipperHQ;
 
 class ShipperMapperPlugin
 {

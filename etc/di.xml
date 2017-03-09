@@ -111,7 +111,7 @@
 
     <!-- ShipperHQ extension -->
     <type name="ShipperHQ\Shipper\Model\Carrier\Processor\ShipperMapper">
-        <plugin name="subscribepro_shipperhq" type="Swarming\SubscribePro\Plugin\ShippingHQ\ShipperMapperPlugin" />
+        <plugin name="subscribepro_shipperhq" type="Swarming\SubscribePro\Plugin\ShipperHQ\ShipperMapperPlugin" />
     </type>
 
     <!-- SubscribeProAdapter -->
