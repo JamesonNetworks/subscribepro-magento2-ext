@@ -36,6 +36,8 @@ class ShipperMapperPlugin
         return $attributes;
     }
 
+    // This method combines several of the methods we don't have access to in the sdk, unfortunately it is incredibly convoluted
+    // to actually determine whether an item is a recurring order
     private function determineIfSubscription($item)
     {
         $buyRequest = $item->getOptionByCode('info_buyRequest');
@@ -49,6 +51,11 @@ class ShipperMapperPlugin
         }
 
         $subscriptionOptions = $buyRequest[OptionProcessor::KEY_SUBSCRIPTION_OPTION];
+
+        // This option is set when an order is made from the platform, we want the platform orders to retain the subscription group
+        if (isset($subscriptionOptions[SubscriptionOptionInterface::IS_FULFILLING]) && $subscriptionOptions[SubscriptionOptionInterface::IS_FULFILLING]) {
+            return true;
+        }
 
         if (!isset($subscriptionOptions[SubscriptionOptionInterface::OPTION])) {
             return false;
